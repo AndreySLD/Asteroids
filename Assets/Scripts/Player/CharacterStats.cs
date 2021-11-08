@@ -11,6 +11,6 @@ namespace Asteroids
         {
             get => _hp;
             set => _hp = value;
-        }
+        }       
     }    
 }
