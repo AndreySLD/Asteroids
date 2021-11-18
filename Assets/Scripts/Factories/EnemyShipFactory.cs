@@ -1,8 +1,9 @@
+using Asteroids.Prototype;
 using UnityEngine;
 
 namespace Asteroids
 {
-    public class EnemyShipFactory : IEnemyFactory
+    internal class EnemyShipFactory : IEnemyFactory
     {
         public Enemy Create(Health hp)
         {
@@ -11,6 +12,14 @@ namespace Asteroids
             enemy.DependencyInjectHealth(hp);
 
             return enemy;
+        }
+        public Enemy Resurrect(EnemyData enemyData)
+        {
+            var resurrectedEnemy = Object.Instantiate(Resources.Load<EnemyShip>("Enemy/EnemyShip"));
+
+            resurrectedEnemy.DependencyInjectHealth(enemyData.Hp);
+
+            return resurrectedEnemy;
         }
     }
 }

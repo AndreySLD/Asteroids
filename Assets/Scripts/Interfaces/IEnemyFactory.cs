@@ -1,7 +1,11 @@
-﻿namespace Asteroids
+﻿using Asteroids.Prototype;
+
+namespace Asteroids
 {
-    public interface IEnemyFactory
+    internal interface IEnemyFactory
     {
         Enemy Create(Health hp);
+
+        Enemy Resurrect(EnemyData enemyData);
     }
 }

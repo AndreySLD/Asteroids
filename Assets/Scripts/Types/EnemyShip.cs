@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Asteroids
 {
-    public class EnemyShip : Enemy
+    internal class EnemyShip : Enemy
     {
         [SerializeField] private float _movementSpeed;
         private float _horizontalMoveAmount;
@@ -16,13 +16,10 @@ namespace Asteroids
         {
             _moveTransform = new MoveTransform(transform, _movementSpeed);            
         }
-        private void Start()
-        {
-            _delta = Time.deltaTime;
-        }
 
         private void Update()
-        {           
+        {
+            _delta = Time.deltaTime;
             Move(_delta);
         }
 

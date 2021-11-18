@@ -1,3 +1,4 @@
+using Asteroids.Prototype;
 using UnityEngine;
 
 namespace Asteroids
@@ -11,6 +12,10 @@ namespace Asteroids
             enemy.DependencyInjectHealth(hp);
 
             return enemy;
+        }
+        public Enemy Resurrect(EnemyData enemyData)
+        {
+            return default;
         }
     }
 }

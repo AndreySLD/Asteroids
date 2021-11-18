@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Asteroids
 {
-    public abstract class Enemy : MonoBehaviour
+    internal abstract class Enemy : MonoBehaviour
     {
         public static IEnemyFactory Factory;
         private Transform _rotPool;
